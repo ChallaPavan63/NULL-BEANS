@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - Coffee Beans</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://i.imgur.com/vH3sD51.png" alt="Coffee Beans Logo" class="brand-logo">
+                    <span class="website-title">NULL BEANS</span>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="search-item">
+                        <div class="nav-search-box">
+                            <input type="text" placeholder="Search...">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </li>
+                    <li><a href="cart.html"><i class="fas fa-shopping-bag"></i></a></li>
+                    <li><a href="profile.html" class="active"><i class="fas fa-user"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="profile-page-content">
+        <div class="container">
+            <h1 class="profile-title"><i class="fas fa-user-circle"></i> My Account</h1>
+            <p class="profile-welcome">Welcome back, Coffee Lover!</p>
+
+            <div class="profile-layout">
+                
+                <nav class="profile-nav-tabs">
+                    <a href="#dashboard" class="nav-tab active"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                    <a href="#orders" class="nav-tab"><i class="fas fa-history"></i> Order History</a>
+                    <a href="#details" class="nav-tab"><i class="fas fa-address-card"></i> Account Details</a>
+                    <a href="#subscriptions" class="nav-tab"><i class="fas fa-box"></i> Subscriptions</a>
+                    <a href="#settings" class="nav-tab"><i class="fas fa-cog"></i> Settings</a>
+                    <a href="#" class="nav-tab logout-btn"><i class="fas fa-sign-out-alt"></i> Log Out</a>
+                </nav>
+
+                <section class="profile-content-area">
+                    
+                    <div id="dashboard" class="profile-section active-content">
+                        <h2>Dashboard Overview</h2>
+                        <div class="stat-grid">
+                            <div class="stat-card">
+                                <h3>Total Orders</h3>
+                                <p>14</p>
+                            </div>
+                            <div class="stat-card">
+                                <h3>Last Order Date</h3>
+                                <p>2025/10/15</p>
+                            </div>
+                            <div class="stat-card">
+                                <h3>Reward Points</h3>
+                                <p class="gold-text">250</p>
+                            </div>
+                        </div>
+                        
+                        <h3>Quick Actions</h3>
+                        <div class="quick-actions">
+                            <a href="#orders" class="action-btn">View My Orders</a>
+                            <a href="menu.html" class="action-btn primary-action">Start a New Order</a>
+                        </div>
+                    </div>
+
+                    <div id="orders" class="profile-section">
+                        <h2>Order History</h2>
+                        <div class="order-list">
+                            <div class="order-item">
+                                <span class="order-id">#CB1025</span>
+                                <span class="order-date">2025/10/15</span>
+                                <span class="order-status completed"><i class="fas fa-check-circle"></i> Completed</span>
+                                <span class="order-total">$45.50</span>
+                                <a href="#" class="order-details-link">View Details</a>
+                            </div>
+                            <div class="order-item">
+                                <span class="order-id">#CB0910</span>
+                                <span class="order-date">2025/09/10</span>
+                                <span class="order-status completed"><i class="fas fa-check-circle"></i> Completed</span>
+                                <span class="order-total">$32.00</span>
+                                <a href="#" class="order-details-link">View Details</a>
+                            </div>
+                            <p class="no-orders-msg">No older orders found.</p>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-section contact-info">
+                <h3>Coffee Beans</h3>
+                <p>Crafting Focus Since 2025.</p>
+                <p>&copy; 2025 Coffee Beans. All Rights Reserved.</p>
+            </div>
+            <div class="footer-section footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social-media">
+                <h3>Connect With Us</h3>
+                <a href="mailto:info@coffeebeans.com" class="social-icon"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://instagram.com/coffeebeans" class="social-icon" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

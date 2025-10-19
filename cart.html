@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Coffee Beans</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://i.imgur.com/vH3sD51.png" alt="Coffee Beans Logo" class="brand-logo">
+                    <span class="website-title">NULL BEANS</span>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="search-item">
+                        <div class="nav-search-box">
+                            <input type="text" placeholder="Search...">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </li>
+                    <li><a href="#" class="active"><i class="fas fa-shopping-bag"></i></a></li>
+                    <li><a href="#"><i class="fas fa-user"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="cart-page-content">
+        <div class="container">
+            <h1 class="cart-title"><i class="fas fa-shopping-bag"></i> Your Cart</h1>
+            <p class="cart-status">You currently have 3 items in your cart.</p>
+
+            <div class="cart-layout">
+                
+                <section class="cart-items-list">
+                    
+                    <div class="cart-item">
+                        <img src="https://images.unsplash.com/photo-1558980394-6a84391af88e?q=80&w=100&h=100&fit=crop" alt="Iced Mocha" class="item-thumbnail">
+                        <div class="item-details">
+                            <h3>Iced Mocha</h3>
+                            <p class="item-sub-details">Size: Large / Milk: Oat</p>
+                            <button class="remove-btn">Remove</button>
+                        </div>
+                        <div class="item-controls">
+                            <input type="number" value="1" min="1" class="item-quantity">
+                        </div>
+                        <div class="item-price-total">
+                            $5.25
+                        </div>
+                    </div>
+
+                    <div class="cart-item">
+                        <img src="https://images.unsplash.com/photo-1544772153-f4c2c8f8510f?q=80&w=100&h=100&fit=crop" alt="Espresso Beans" class="item-thumbnail">
+                        <div class="item-details">
+                            <h3>Signature Espresso Beans</h3>
+                            <p class="item-sub-details">Weight: 12 oz. / Grind: Whole Bean</p>
+                            <button class="remove-btn">Remove</button>
+                        </div>
+                        <div class="item-controls">
+                            <input type="number" value="2" min="1" class="item-quantity">
+                        </div>
+                        <div class="item-price-total">
+                            $24.00
+                        </div>
+                    </div>
+
+                    <div class="cart-actions">
+                        <a href="menu.html" class="continue-shopping"><i class="fas fa-arrow-left"></i> Continue Shopping</a>
+                    </div>
+                </section>
+
+                <section class="cart-summary">
+                    <h2>Order Summary</h2>
+                    <div class="summary-line">
+                        <span>Subtotal</span>
+                        <span>$29.25</span>
+                    </div>
+                    <div class="summary-line">
+                        <span>Shipping (Standard)</span>
+                        <span>$5.00</span>
+                    </div>
+                    <div class="summary-line total">
+                        <span>Estimated Total</span>
+                        <span>$34.25</span>
+                    </div>
+                    
+                    <a href="#" class="cta-button checkout-btn">Proceed to Checkout</a>
+                    <p class="tax-info">Shipping calculated at checkout. Tax is estimated.</p>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-section contact-info">
+                <h3>Coffee Beans</h3>
+                <p>Crafting Focus Since 2025.</p>
+                <p>&copy; 2025 Coffee Beans. All Rights Reserved.</p>
+            </div>
+            <div class="footer-section footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social-media">
+                <h3>Connect With Us</h3>
+                <a href="mailto:info@coffeebeans.com" class="social-icon"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://instagram.com/coffeebeans" class="social-icon" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

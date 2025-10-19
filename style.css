@@ -1,0 +1,1460 @@
+/* --- Global Reset and Setup --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    color: #2c2c2c; /* Deep Charcoal text */
+    background-color: #F8F4E3; /* Soft Cream Background (Entire Page) */
+}
+
+.container {
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+
+/* --- Premium Coffee Shop Color Palette --- */
+:root {
+    --white: #fff;
+    --dark-text: #2c2c2c;
+    --border-light: #e0e0e0;
+    --accent-gold: #B8860B; /* Burnished Gold */
+    --primary-coffee-brown: #5C4033; /* Rich Espresso Brown */
+    --hover-gold: #D4AF37;
+}
+
+/* --- Header & Navigation --- */
+.main-header {
+    background-color: var(--white); /* White Navbar */
+    padding: 15px 0; /* DECREASED PADDING for smaller size */
+    border-bottom: 1px solid var(--border-light);
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    display: flex; /* Enable flex for logo and title alignment */
+    align-items: center;
+    gap: 15px; /* Space between the image logo and the text title */
+    color: inherit; /* Ensure the link doesn't affect the title color */
+}
+
+.brand-logo {
+    height: 50px; /* REDUCED HEIGHT for smaller logo image */
+    width: auto;
+    display: block;
+}
+
+.website-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--primary-coffee-brown); /* Coffee color text */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 1; 
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.main-nav a {
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: 500;
+    padding: 5px 0;
+    color: var(--primary-coffee-brown);
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--accent-gold);
+}
+
+.main-nav i {
+    font-size: 1.1em;
+    color: var(--primary-coffee-brown);
+}
+.main-nav a:hover i {
+    color: var(--accent-gold);
+}
+
+/* Search Bar Styling */
+.nav-search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--primary-coffee-brown);
+    border-radius: 5px;
+    padding: 8px 15px;
+    width: 250px;
+    background-color: var(--white);
+    transition: all 0.3s ease;
+}
+
+.nav-search-box:focus-within {
+    border-color: var(--accent-gold);
+    box-shadow: 0 0 0 2px rgba(184, 134, 11, 0.2);
+}
+
+.nav-search-box input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    padding: 0;
+    background: none;
+    color: var(--dark-text);
+    font-family: 'Georgia', serif;
+    font-size: 0.9em;
+}
+
+.nav-search-box input::placeholder {
+    color: #888;
+}
+
+.nav-search-box i {
+    color: var(--primary-coffee-brown);
+    margin-left: 10px;
+    font-size: 1em;
+}
+
+
+/* --- Hero Section --- */
+.hero-section {
+    height: 65vh;
+    min-height: 450px;
+    /* Moody coffee cup image */
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('img2.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-subheading {
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 4px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: var(--hover-gold);
+}
+
+.hero-content h1 {
+    font-size: 4em;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.cta-button {
+    background-color: var(--primary-coffee-brown);
+    color: var(--white);
+    padding: 14px 45px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: var(--accent-gold);
+}
+
+/* --- Value Propositions Section --- */
+.value-section {
+    padding: 60px 0;
+    background-color: var(--cream-bg);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.value-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.value-card i {
+    font-size: 2.8em;
+    color: var(--accent-gold);
+    margin-bottom: 15px;
+}
+
+.value-card h3 {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.value-card p {
+    color: #666;
+    font-size: 0.95em;
+    line-height: 1.4;
+}
+
+/* --- Featured Product Spotlight --- */
+.spotlight-section {
+    padding: 80px 0;
+    background-color: var(--cream-bg);
+}
+
+.spotlight-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.spotlight-image img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    display: block;
+    border-radius: 0;
+}
+
+.section-tag {
+    color: var(--primary-coffee-brown);
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 3px;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.spotlight-text h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: var(--dark-text);
+}
+
+.spotlight-text p {
+    margin-bottom: 30px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.key-features {
+    margin-bottom: 30px;
+}
+
+.key-features li {
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: var(--dark-text);
+}
+
+.key-features i {
+    color: var(--primary-coffee-brown);
+    margin-right: 10px;
+}
+
+.shop-link {
+    color: var(--accent-gold);
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+    border-bottom: 2px solid var(--accent-gold);
+    padding-bottom: 5px;
+}
+
+.shop-link i {
+    margin-left: 8px;
+    transition: margin-left 0.3s;
+}
+
+.shop-link:hover i {
+    margin-left: 15px;
+}
+
+/* Media Query for Mobile/Tablet */
+@media (max-width: 900px) {
+    .main-nav ul {
+        gap: 15px;
+    }
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+    .value-grid, .spotlight-grid {
+        grid-template-columns: 1fr;
+    }
+    .spotlight-image img {
+        height: 400px;
+    }
+    .spotlight-text {
+        padding-top: 20px;
+    }
+    .nav-search-box {
+        width: 180px;
+        padding: 6px 10px;
+    }
+}
+
+/* --- Menu Page Specific Styling --- */
+
+.menu-page-content {
+    padding: 60px 0 100px 0;
+    background-color: var(--cream-bg);
+}
+
+.page-title {
+    font-size: 3.5em;
+    font-weight: 700;
+    text-align: center;
+    color: var(--primary-coffee-brown);
+    margin-bottom: 10px;
+}
+
+.menu-intro {
+    font-size: 1.1em;
+    text-align: center;
+    color: #666;
+    margin-bottom: 50px;
+    font-style: italic;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for categories */
+    gap: 50px 80px;
+}
+
+.full-width {
+    grid-column: 1 / -1; /* Make the Iced Tea section span both columns */
+}
+
+.category-title {
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--dark-text);
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--accent-gold); /* Gold underline for premium feel */
+}
+
+.category-title i {
+    color: var(--primary-coffee-brown);
+    margin-right: 15px;
+    font-size: 1em;
+}
+
+.menu-list {
+    display: grid;
+    gap: 15px;
+}
+
+.menu-list.two-columns {
+    grid-template-columns: repeat(2, 1fr); /* Split the Iced Tea list into two columns */
+    gap: 15px 40px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 8px 0;
+    border-bottom: 1px dotted #ccc;
+    font-size: 1.1em;
+}
+
+.item-name {
+    font-weight: 500;
+    color: var(--primary-coffee-brown);
+}
+
+.item-price {
+    /* Add a placeholder price if desired, otherwise leave empty */
+    color: var(--dark-text); 
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* Responsive adjustment for menu page */
+@media (max-width: 768px) {
+    .menu-grid {
+        grid-template-columns: 1fr; /* Stack categories on mobile */
+        gap: 40px;
+    }
+    .menu-list.two-columns {
+        grid-template-columns: 1fr; /* Stack tea items on mobile */
+    }
+    .page-title {
+        font-size: 2.5em;
+    }
+}
+
+/* --- Menu Page Specific Styling --- */
+
+/* Menu Page Hero Section */
+.menu-hero-section {
+    height: 40vh; /* Shorter hero for internal pages */
+    min-height: 250px;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('img7.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    margin-bottom: 0px; /* Space below the hero */
+}
+
+.menu-hero-section h1 {
+    font-size: 3.5em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.menu-hero-section p {
+    font-size: 1.2em;
+    font-weight: 300;
+    color: var(--hover-gold);
+}
+
+
+.menu-page-content {
+    padding: 20px 0 100px 0; /* Reduced top padding as hero now exists */
+    background-color: var(--cream-bg);
+}
+
+/* Removed the .page-title and .menu-intro from here as they are now in the hero */
+.menu-intro {
+    font-size: 1.1em;
+    text-align: center;
+    color: #666;
+    margin-bottom: 50px;
+    font-style: italic;
+}
+
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 80px;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.category-title {
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--dark-text);
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--accent-gold);
+}
+
+.category-title i {
+    color: var(--primary-coffee-brown);
+    margin-right: 15px;
+    font-size: 1em;
+}
+
+.menu-list {
+    display: grid;
+    gap: 15px;
+}
+
+.menu-list.two-columns {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px 40px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 8px 0;
+    border-bottom: 1px dotted #ccc;
+    font-size: 1.1em;
+}
+
+.item-name {
+    font-weight: 500;
+    color: var(--primary-coffee-brown);
+}
+
+.item-price {
+    color: var(--dark-text); 
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* New: Menu Page Image Gallery */
+.menu-image-gallery {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.gallery-heading {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--primary-coffee-brown);
+    margin-bottom: 40px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 250px; /* Consistent height for images */
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03);
+}
+
+/* Responsive adjustment for menu page */
+@media (max-width: 768px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .menu-list.two-columns {
+        grid-template-columns: 1fr;
+    }
+    .menu-hero-section h1 {
+        font-size: 2.5em;
+    }
+    .gallery-heading {
+        font-size: 2em;
+    }
+}
+
+/* --- About Page Specific Styling --- */
+
+/* About Page Hero */
+.about-hero-section {
+    height: 40vh; 
+    min-height: 250px;
+    /* Image related to focus, design, or minimal coffee */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('img6.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.about-tagline {
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--hover-gold);
+    max-width: 800px;
+}
+
+.about-content {
+    padding: 80px 0;
+    background-color: var(--cream-bg);
+}
+
+.story-philosophy-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.about-heading {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--primary-coffee-brown);
+    margin-bottom: 20px;
+}
+
+.about-heading.center {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.about-section-tag {
+    color: var(--accent-gold);
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 3px;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.text-block p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+    color: #555;
+    font-size: 1.1em;
+}
+
+.image-block img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+}
+
+/* Mantra Spotlight Section */
+.mantra-spotlight {
+    background-color: var(--primary-coffee-brown);
+    color: var(--white);
+    padding: 60px 40px;
+    text-align: center;
+    border-radius: 4px;
+    margin-bottom: 80px;
+}
+
+.mantra-quote {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.mantra-quote p {
+    font-size: 1.8em;
+    line-height: 1.5;
+    font-style: italic;
+    font-weight: 300;
+}
+
+/* Value Pillars Section */
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.pillar-card {
+    background-color: var(--white);
+    padding: 40px 20px;
+    border: 1px solid var(--border-light);
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.pillar-card i {
+    font-size: 3em;
+    color: var(--accent-gold);
+    margin-bottom: 15px;
+}
+
+.pillar-card h3 {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: var(--dark-text);
+    margin-bottom: 10px;
+}
+
+/* Media Query for responsive layout */
+@media (max-width: 900px) {
+    .story-philosophy-section,
+    .pillars-grid {
+        grid-template-columns: 1fr;
+    }
+    .image-block img {
+        height: 400px;
+        order: -1; /* Image appears first on mobile */
+        margin-bottom: 30px;
+    }
+    .about-tagline {
+        font-size: 2em;
+    }
+    .mantra-quote p {
+        font-size: 1.4em;
+    }
+}
+
+/* --- START RESPONSIVE MOBILE STYLES (Add to the end of style.css) --- */
+
+@media (max-width: 900px) {
+    /* * --- GLOBAL ADJUSTMENTS --- 
+     */
+    .container {
+        width: 95%; /* Use more screen width on smaller devices */
+    }
+
+    /* * --- HEADER & NAVIGATION --- 
+     * Stack logo/title above the main menu items for cleaner look
+     */
+    .main-header .container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .logo a {
+        flex-direction: column; /* Stack logo image and title vertically */
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .brand-logo {
+        height: 40px; /* Slightly smaller logo */
+    }
+    
+    .website-title {
+        font-size: 1.4em; /* Smaller title font */
+        letter-spacing: 1px;
+    }
+
+    .main-nav {
+        width: 100%;
+        margin-top: 10px;
+        padding-bottom: 5px;
+        border-top: 1px solid var(--border-light);
+    }
+    
+    .main-nav ul {
+        justify-content: space-between; /* Space out nav links */
+        gap: 15px; 
+    }
+    
+    .main-nav a {
+        font-size: 0.8em; /* Smaller font for menu links */
+    }
+
+    /* Hide the search input field and show only the icon on smaller screens */
+    .search-item {
+        order: 10; /* Move search item to the end */
+    }
+    .nav-search-box {
+        width: auto;
+        padding: 5px;
+        border: none;
+        background: none;
+    }
+    .nav-search-box input {
+        display: none; /* Hide the input box */
+    }
+    .nav-search-box i {
+        margin: 0;
+        font-size: 1.5em; /* Make the search icon bigger for easier tapping */
+    }
+    
+    /* * --- HOMEPAGE (index.html) SPECIFIC STYLES --- 
+     */
+    .hero-content h1 {
+        font-size: 2.8em;
+    }
+    .hero-subheading {
+        letter-spacing: 3px;
+    }
+    
+    /* Stack value cards and spotlight elements */
+    .value-grid, .spotlight-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    /* Reverse order for visual flow on mobile */
+    .spotlight-image {
+        order: -1; 
+    }
+    
+    .spotlight-image img {
+        height: 350px; /* Adjust height */
+    }
+    .spotlight-text {
+        text-align: center;
+    }
+    .spotlight-text .key-features {
+        text-align: left;
+        margin: 0 auto 30px auto;
+        max-width: 300px; /* Constrain list width */
+    }
+
+
+    /* * --- MENU PAGE (menu.html) SPECIFIC STYLES --- 
+     */
+    .menu-hero-section h1 {
+        font-size: 2.5em;
+    }
+    
+    /* Stack menu categories */
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    /* Stack iced tea items */
+    .menu-list.two-columns {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 images per row */
+        gap: 10px;
+    }
+    
+    .gallery-grid img {
+        height: 180px; /* Shorter image height on mobile */
+    }
+
+
+    /* * --- ABOUT PAGE (about.html) SPECIFIC STYLES --- 
+     */
+    .about-tagline {
+        font-size: 2em;
+    }
+    
+    /* Stack story and pillar sections */
+    .story-philosophy-section, .pillars-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Stack image above text in the story section */
+    .image-block {
+        order: -1;
+    }
+    .image-block img {
+        height: 350px;
+    }
+    
+    .mantra-spotlight {
+        padding: 40px 20px;
+    }
+    .mantra-quote p {
+        font-size: 1.3em;
+    }
+    
+    .pillar-card {
+        padding: 30px 15px;
+    }
+}
+
+/* --- END RESPONSIVE MOBILE STYLES --- */
+
+/* --- CSS Modifications for Hero Subheading Color --- */
+
+.hero-subheading {
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 4px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: var(--white); /* CHANGED: Set to white for cleaner look against dark image */
+}
+
+/* --- New CSS for Suggestion Strip --- */
+
+.suggestion-strip {
+    background-color: var(--primary-coffee-brown); /* Espresso Brown background */
+    color: var(--white);
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1em;
+    font-style: italic;
+    letter-spacing: 0.5px;
+}
+
+/* --- New CSS for Footer --- */
+
+.main-footer {
+    background-color: var(--dark-text); /* Use charcoal/dark text color for contrast */
+    color: #ccc;
+    padding: 40px 0;
+    font-size: 0.9em;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-section {
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    color: var(--accent-gold);
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.footer-section p {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links a {
+    color: #ccc;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.footer-links a:hover {
+    color: var(--accent-gold);
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.social-icon:hover {
+    color: var(--accent-gold);
+}
+
+.social-icon i {
+    font-size: 1.2em;
+    margin-right: 10px;
+    color: var(--accent-gold);
+}
+
+/* --- Mobile View Adjustments for Footer --- */
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    .footer-section {
+        min-width: 100%;
+        margin-bottom: 15px;
+    }
+    .footer-links ul {
+        text-align: center;
+    }
+    .footer-links li, .social-icon {
+        display: block;
+        margin: 5px auto;
+        width: fit-content;
+    }
+    .social-icon i {
+        margin-right: 5px;
+    }
+}
+
+/* --- Cart Page Specific Styling --- */
+
+.cart-page-content {
+    padding: 60px 0 80px 0;
+    background-color: var(--cream-bg);
+}
+
+.cart-title {
+    font-size: 2.8em;
+    font-weight: 700;
+    color: var(--primary-coffee-brown);
+    margin-bottom: 5px;
+}
+
+.cart-title i {
+    color: var(--accent-gold);
+    margin-right: 15px;
+}
+
+.cart-status {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.cart-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Cart list takes two-thirds, summary takes one-third */
+    gap: 40px;
+}
+
+/* --- Cart Items List --- */
+.cart-items-list {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 4px;
+    border: 1px solid var(--border-light);
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.item-thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 20px;
+}
+
+.item-details {
+    flex-grow: 1;
+}
+
+.item-details h3 {
+    font-size: 1.2em;
+    color: var(--dark-text);
+    margin-bottom: 5px;
+}
+
+.item-sub-details {
+    font-size: 0.9em;
+    color: #888;
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    color: var(--primary-coffee-brown);
+    font-size: 0.85em;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 5px;
+}
+
+.item-controls {
+    margin: 0 30px;
+}
+
+.item-quantity {
+    width: 60px;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.item-price-total {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--primary-coffee-brown);
+}
+
+.cart-actions {
+    padding-top: 20px;
+}
+
+.continue-shopping {
+    color: var(--primary-coffee-brown);
+    font-weight: 500;
+}
+
+/* --- Cart Summary --- */
+.cart-summary {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 4px;
+    height: fit-content;
+    border: 1px solid var(--border-light);
+}
+
+.cart-summary h2 {
+    font-size: 1.6em;
+    color: var(--primary-coffee-brown);
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+
+.summary-line.total {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: var(--dark-text);
+    padding-top: 15px;
+    border-top: 2px solid var(--accent-gold);
+}
+
+.checkout-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+    padding: 15px 0;
+    /* Overriding CTA button styles for a strong look */
+    background-color: var(--accent-gold); 
+}
+
+.checkout-btn:hover {
+    background-color: var(--hover-gold);
+}
+
+.tax-info {
+    text-align: center;
+    font-size: 0.85em;
+    color: #888;
+    margin-top: 15px;
+}
+
+/* --- Mobile View Adjustments for Cart --- */
+@media (max-width: 900px) {
+    .cart-layout {
+        grid-template-columns: 1fr; /* Stack items and summary */
+        gap: 30px;
+    }
+    
+    .cart-item {
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: space-between;
+    }
+    
+    .item-thumbnail {
+        margin: 0 10px 10px 0;
+    }
+
+    .item-details {
+        margin-right: auto;
+        text-align: left;
+    }
+    
+    .item-controls {
+        width: 100%; /* Full width for quantity input */
+        margin: 10px 0;
+        order: 3;
+        text-align: left;
+    }
+
+    .item-price-total {
+        order: 2; /* Price next to the quantity/details */
+        margin-left: 10px;
+    }
+}
+
+/* --- Profile Page Specific Styling --- */
+
+.profile-page-content {
+    padding: 60px 0 80px 0;
+    background-color: var(--cream-bg);
+}
+
+.profile-title {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--primary-coffee-brown);
+    margin-bottom: 5px;
+}
+
+.profile-title i {
+    color: var(--accent-gold);
+    margin-right: 15px;
+}
+
+.profile-welcome {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.profile-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr; /* Fixed width sidebar, flexible content */
+    gap: 40px;
+}
+
+/* --- Profile Navigation/Tabs --- */
+.profile-nav-tabs {
+    background-color: var(--white);
+    padding: 20px 0;
+    border-radius: 4px;
+    border: 1px solid var(--border-light);
+    height: fit-content; /* Only take up necessary height */
+}
+
+.nav-tab {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: var(--dark-text);
+    font-size: 1em;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    border-left: 3px solid transparent;
+}
+
+.nav-tab i {
+    margin-right: 10px;
+    color: var(--primary-coffee-brown);
+}
+
+.nav-tab:hover {
+    background-color: var(--light-gray);
+}
+
+.nav-tab.active {
+    background-color: var(--light-gray);
+    color: var(--primary-coffee-brown);
+    border-left: 3px solid var(--accent-gold);
+}
+
+.nav-tab.active i {
+    color: var(--accent-gold);
+}
+
+.logout-btn {
+    border-top: 1px solid var(--border-light);
+    margin-top: 10px;
+    color: #cc0000;
+}
+
+.logout-btn i {
+    color: #cc0000;
+}
+
+/* --- Profile Content Area --- */
+.profile-content-area {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 4px;
+    border: 1px solid var(--border-light);
+}
+
+.profile-section h2 {
+    font-size: 1.8em;
+    color: var(--primary-coffee-brown);
+    margin-bottom: 25px;
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: 10px;
+}
+
+/* Dashboard Styles */
+#dashboard h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: var(--dark-text);
+    font-size: 1.4em;
+}
+
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    background-color: var(--cream-bg);
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+    border: 1px solid var(--border-light);
+}
+
+.stat-card h3 {
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.stat-card p {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: var(--primary-coffee-brown);
+}
+
+.stat-card p.gold-text {
+    color: var(--accent-gold);
+}
+
+.quick-actions {
+    display: flex;
+    gap: 20px;
+}
+
+.action-btn {
+    padding: 10px 20px;
+    border: 1px solid var(--primary-coffee-brown);
+    color: var(--primary-coffee-brown);
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.action-btn:hover {
+    background-color: var(--light-gray);
+}
+
+.primary-action {
+    background-color: var(--primary-coffee-brown);
+    color: var(--white);
+}
+
+.primary-action:hover {
+    background-color: var(--accent-gold);
+    border-color: var(--accent-gold);
+}
+
+/* Order History Styles */
+.order-item {
+    display: grid;
+    grid-template-columns: 100px 120px 120px 80px 1fr;
+    gap: 10px;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.order-item:first-child {
+    font-weight: 700;
+    color: var(--dark-text);
+    border-bottom: 2px solid var(--primary-coffee-brown);
+}
+
+.order-id {
+    font-weight: 600;
+    color: var(--primary-coffee-brown);
+}
+
+.order-status {
+    font-size: 0.9em;
+    padding: 4px 8px;
+    border-radius: 3px;
+    color: var(--white);
+    background-color: #f0ad4e;
+}
+
+.order-status.completed {
+    background-color: #5cb85c;
+}
+
+.order-total {
+    font-weight: 700;
+    color: var(--dark-text);
+}
+
+.order-details-link {
+    color: var(--accent-gold);
+    text-decoration: underline;
+    text-align: right;
+}
+
+.no-orders-msg {
+    padding: 20px;
+    text-align: center;
+    color: #999;
+}
+
+/* --- Mobile View Adjustments for Profile --- */
+@media (max-width: 900px) {
+    .profile-layout {
+        grid-template-columns: 1fr; /* Stack sidebar and content */
+        gap: 20px;
+    }
+    
+    .profile-nav-tabs {
+        display: flex; /* Tabs become horizontal scrollable bar */
+        overflow-x: auto;
+        white-space: nowrap;
+        border-radius: 0;
+        border-right: none;
+        border-left: none;
+        padding: 0;
+    }
+
+    .nav-tab {
+        flex-shrink: 0;
+        padding: 10px 15px;
+        border-bottom: 3px solid transparent;
+        border-left: none;
+    }
+
+    .nav-tab.active {
+        border-left: none;
+        border-bottom: 3px solid var(--accent-gold);
+    }
+    
+    .stat-grid {
+        grid-template-columns: 1fr; /* Stack stats vertically */
+    }
+    
+    .quick-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .order-item {
+        grid-template-columns: 1fr 1fr;
+        font-size: 0.9em;
+    }
+    
+    .order-id, .order-date {
+        grid-column: 1 / span 2; /* Full width */
+    }
+    
+    .order-total, .order-details-link {
+        grid-row: 3;
+        text-align: left;
+    }
+    
+    .order-total {
+        grid-column: 1;
+    }
+    
+    .order-details-link {
+        grid-column: 2;
+        text-align: right;
+    }
+    
+    .order-status {
+        grid-row: 2;
+        grid-column: 1 / span 2;
+        width: fit-content;
+        margin-top: 5px;
+    }
+}
